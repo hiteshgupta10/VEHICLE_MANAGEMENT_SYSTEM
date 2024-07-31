@@ -1,0 +1,12 @@
+<div>
+    <h2>Manage Vehicles</h2>
+    <button routerLink="add">Add Vehicle</button>
+    <ul>
+      <li *ngFor="let vehicle of vehicles">
+        {{ vehicle.make }} {{ vehicle.model }} - {{ vehicle.year }}
+        <button (click)="editVehicle(vehicle)">Edit</button>
+        <button (click)="deleteVehicle(vehicle.vehicleId)">Delete</button>
+      </li>
+    </ul>
+  </div>
+  

@@ -1,0 +1,10 @@
+<div>
+    <h2>All Customers</h2>
+    <button routerLink="add" class="btn btn-primary">Add Customer</button>
+    <ul class="list-group mt-3">
+      <li *ngFor="let customer of customers" class="list-group-item">
+        {{ customer.firstName }} {{ customer.lastName }}
+      </li>
+    </ul>
+  </div>
+  

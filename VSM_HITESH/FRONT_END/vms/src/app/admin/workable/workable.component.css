@@ -1,0 +1,33 @@
+/* Ensure the body has some padding to avoid content being hidden under the navbar */
+body {
+    padding-top: 56px; /* Height of the fixed navbar */
+  }
+  
+  /* Style the sidebar */
+  #sidebar {
+    position: fixed;
+    top: 56px; /* Below the navbar */
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding-top: 20px; /* Additional padding for sidebar items */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Allow scrolling if content is too tall */
+  }
+  
+  /* Sidebar links */
+  #sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  #sidebar .nav-link:hover {
+    color: #007bff;
+  }
+  
+  /* Main content should account for the width of the sidebar */
+  main {
+    margin-left: 250px; /* Adjust based on sidebar width */
+    padding-top: 20px;
+  }
+  
