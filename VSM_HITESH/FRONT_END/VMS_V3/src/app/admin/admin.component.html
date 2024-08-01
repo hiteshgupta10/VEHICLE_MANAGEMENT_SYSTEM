@@ -1,0 +1,26 @@
+<!-- <nav class="navbar" style="background-color: #e3f2fd;">
+  <form class="container-fluid justify-content-start">
+    <button class="btn btn-outline-success me-2" type="button">Admin</button>
+    <button routerLink="vehicle" routerLinkActive="active-link" class="btn btn-sm btn-outline-secondary me-2" type="button">Vechile</button>
+    <button routerLink="customer" routerLinkActive="active-link" class="btn btn-sm btn-outline-secondary me-2" type="button">Customer</button>
+    <button class="btn btn-sm btn-outline-secondary me-2" type="button">Logout</button>
+  </form>
+</nav>
+
+
+<div class="container-fluid mt-5">
+  <router-outlet></router-outlet>
+</div> -->
+<nav class="navbar" style="background-color: #e3f2fd;">
+  <form class="container-fluid justify-content-start">
+    <button class="btn btn-outline-success me-2" type="button">Admin</button>
+    <button routerLink="vehicle" routerLinkActive="active-link" class="btn btn-sm btn-outline-secondary me-2" type="button">Vehicle</button>
+    <button routerLink="customer" routerLinkActive="active-link" class="btn btn-sm btn-outline-secondary me-2" type="button">Customer</button>
+    <button class="btn btn-sm btn-outline-secondary me-2" (click)="onLogout()" type="button">Logout</button>
+  </form>
+</nav>
+
+<!-- Main Content -->
+<div class="container-fluid mt-5">
+  <router-outlet></router-outlet>
+</div>

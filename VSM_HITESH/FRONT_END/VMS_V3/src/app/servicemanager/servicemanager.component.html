@@ -1,0 +1,50 @@
+<div class="container">
+  <h2>Service Manager</h2>
+  <button class="btn btn-sm btn-outline-secondary me-2" (click)="onLogout()" type="button">Logout</button>
+
+  <div *ngIf="vehicles.length === 0">
+    <p>No vehicles scheduled for servicing.</p>
+  </div>
+
+  <div *ngIf="vehicles.length > 0">
+    <h3>Scheduled Vehicles</h3>
+    <ul class="list-group">
+      <li *ngFor="let vehicle of vehicles" class="list-group-item">
+        <div class="vehicle-info">
+          <p><strong>{{ vehicle.make }} {{ vehicle.model }}</strong></p>
+          <p>VIN: {{ vehicle.vin }}</p>
+          <button class="btn btn-success" (click)="completeServiceRecord(vehicle.vehicleId)">
+            Complete Service
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="selectedVehicle">
+    <h3>Selected Vehicle</h3>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ selectedVehicle.make }} {{ selectedVehicle.model }}</h5>
+        <p class="card-text">VIN: {{ selectedVehicle.vin }}</p>
+
+        <h4>Add Material Bill</h4>
+        <form #materialBillForm="ngForm" (ngSubmit)="onAddMaterialBill(materialBillForm)">
+          <div class="form-group">
+            <label for="item">Item</label>
+            <input type="text" id="item" name="item" class="form-control" [(ngModel)]="newMaterialBill.item" required>
+          </div>
+          <div class="form-group">
+            <label for="cost">Cost</label>
+            <input type="number" id="cost" name="cost" class="form-control" [(ngModel)]="newMaterialBill.cost" required>
+          </div>
+          <div class="form-group">
+            <label for="units">Units</label>
+            <input type="number" id="units" name="units" class="form-control" [(ngModel)]="newMaterialBill.units" required>
+          </div>
+          <button type="submit" class="btn btn-primary" [disabled]="!materialBillForm.form.valid">Add Material Bill</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
