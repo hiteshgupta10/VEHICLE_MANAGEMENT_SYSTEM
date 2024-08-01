@@ -1,0 +1,18 @@
+<div>
+  <h2>Scheduled Vehicles</h2>
+
+  <!-- List of scheduled vehicles -->
+  <ul>
+    <li *ngFor="let vehicle of vehicles" (click)="selectVehicle(vehicle)">
+      {{ vehicle.make }} {{ vehicle.model }} ({{ vehicle.year }})
+      <button (click)="onCompleteServiceRecord(vehicle.vehicleId); $event.stopPropagation()">Complete Service</button>
+
+      <!-- Display service records if needed -->
+      <ul *ngIf="vehicle.serviceRecords && vehicle.serviceRecords.length > 0">
+        <li *ngFor="let record of vehicle.serviceRecords">
+          Service Record ID: {{ record.srId }} - Description: {{ record.serviceDesc }}
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

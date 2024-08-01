@@ -1,0 +1,31 @@
+<!-- <div>
+  <h2>Scheduled Vehicles</h2>
+
+
+  <ul>
+    <li *ngFor="let vehicle of vehicles" (click)="selectVehicle(vehicle)">
+      {{ vehicle.model }} ({{ vehicle.licensePlate }})
+      <button (click)="onCompleteServiceRecord(vehicle.srId); $event.stopPropagation()">Complete Service</button>
+    </li>
+  </ul>
+
+
+  <div *ngIf="selectedVehicle">
+    <h3>Add Material Bill for Vehicle: {{ selectedVehicle.model }}</h3>
+    <form #materialBillForm="ngForm" (ngSubmit)="onAddMaterialBill(materialBillForm)">
+      <div>
+        <label for="item">Item:</label>
+        <input type="text" id="item" [(ngModel)]="newMaterialBill.item" name="item" required>
+      </div>
+      <div>
+        <label for="cost">Cost:</label>
+        <input type="number" id="cost" [(ngModel)]="newMaterialBill.cost" name="cost" required>
+      </div>
+      <div>
+        <label for="units">Units:</label>
+        <input type="number" id="units" [(ngModel)]="newMaterialBill.units" name="units" required>
+      </div>
+      <button type="submit">Add Material Bill</button>
+    </form>
+  </div>
+</div> -->

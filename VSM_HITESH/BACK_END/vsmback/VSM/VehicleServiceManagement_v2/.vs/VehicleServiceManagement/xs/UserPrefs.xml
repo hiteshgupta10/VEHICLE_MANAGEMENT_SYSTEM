@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{F837DE3E-E029-4781-B85F-71E7D534F647}|https">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/ServiceAdvisorController.cs">
+    <Files>
+      <File FileName="Program.cs" Line="32" Column="30" />
+      <File FileName="Controllers/LoginController.cs" Line="7" Column="28" />
+      <File FileName="Controllers/AdminController.cs" Line="229" Column="2" />
+      <File FileName="Controllers/ServiceAdvisorController.cs" Line="28" Column="28" />
+      <File FileName="appsettings.json" Line="11" Column="61" />
+      <File FileName="Properties/launchSettings.json" Line="41" Column="2" />
+      <File FileName="Models/Vehicle.cs" Line="24" Column="1" />
+      <File FileName="Models/Customer.cs" Line="18" Column="41" />
+      <File FileName="Models/ServiceRecord.cs" Line="28" Column="1" />
+      <File FileName="Models/User.cs" Line="25" Column="2" />
+      <File FileName="Models/VehicleServiceManagementContext.cs" Line="133" Column="16" />
+      <File FileName="Models/MaterialBill.cs" Line="10" Column="34" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="VehicleServiceManagement" expanded="True">
+            <Node name="VehicleServiceManagement" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="ServiceAdvisorController.cs" selected="True" />
+              </Node>
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.VehicleServiceManagement PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+</Properties>

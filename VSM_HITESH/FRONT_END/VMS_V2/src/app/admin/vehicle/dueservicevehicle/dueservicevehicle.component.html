@@ -1,0 +1,17 @@
+<div>
+  <h2>Vehicles Due for Service</h2>
+  <ul>
+    <li *ngFor="let vehicle of vehicles">
+      <div>
+        <strong>Make:</strong> {{ vehicle.vehicle.make }}
+      </div>
+      <div>
+        <strong>Model:</strong> {{ vehicle.vehicle.model }}
+      </div>
+      <div>
+        <strong>Year:</strong> {{ vehicle.vehicle.year }}
+      </div>
+      <button (click)="scheduleService(vehicle.vehicleId)">Schedule Service</button>
+    </li>
+  </ul>
+</div>

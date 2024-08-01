@@ -1,0 +1,34 @@
+<div>
+  <h2>Manage Vehicles</h2>
+  <form (ngSubmit)="addVehicle()" #vehicleForm="ngForm">
+    <div>
+      <label for="make">Make:</label>
+      <input type="text" id="make" [(ngModel)]="newVehicle.make" name="make" required>
+    </div>
+    <div>
+      <label for="model">Model:</label>
+      <input type="text" id="model" [(ngModel)]="newVehicle.model" name="model" required>
+    </div>
+    <div>
+      <label for="year">Year:</label>
+      <input type="number" id="year" [(ngModel)]="newVehicle.year" name="year" required>
+    </div>
+    <div>
+      <label for="customerId">Customer ID:</label>
+      <input type="number" id="customerId" [(ngModel)]="newVehicle.customerId" name="customerId" required>
+    </div>
+    <div>
+      <label for="vin">VIN:</label>
+      <input type="text" id="vin" [(ngModel)]="newVehicle.vin" name="vin" required>
+    </div>
+    <button type="submit" [disabled]="!vehicleForm.form.valid">Add Vehicle</button>
+  </form>
+
+  <ul>
+    <li *ngFor="let vehicle of vehicles">
+      {{ vehicle.make }} {{ vehicle.model }} - {{ vehicle.year }}
+      <button (click)="editVehicle(vehicle)">Edit</button>
+      <button (click)="deleteVehicle(vehicle.vehicleId)">Delete</button>
+    </li>
+  </ul>
+</div>

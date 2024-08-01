@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+      <h1 class="text-center mb-4 red-text">Welcome to Prime AutoMobiles</h1>
+      <form #loginForm="ngForm" (ngSubmit)="onLoginFormSubmit(loginForm)">
+        <div class="form-group">
+          <label for="username">Username/Email</label>
+          <input
+            type="text"
+            id="username"
+            class="form-control"
+            name="username"
+            ngModel
+            required
+            #username="ngModel"
+          />
+          <div
+            *ngIf="username.touched && !username.valid"
+            class="text-danger"
+          >
+            Username is required.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            class="form-control"
+            name="password"
+            ngModel
+            required
+            #password="ngModel"
+          />
+          <div
+            *ngIf="password.touched && !password.valid"
+            class="text-danger"
+          >
+            Password is required.
+          </div>
+        </div>
+
+        <br />
+        <button
+          [disabled]="!loginForm.valid"
+          type="submit"
+          class="btn btn-primary btn-block"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
