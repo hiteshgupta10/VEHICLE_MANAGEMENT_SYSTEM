@@ -1,0 +1,19 @@
+<div>
+  <h2>Vehicles Under Service</h2>
+  <ul>
+    <li *ngFor="let vehicle of vehicles">
+      <div>
+        <strong>Make:</strong> {{ vehicle.vehicle.make }}
+      </div>
+      <div>
+        <strong>Model:</strong> {{ vehicle.vehicle.model }}
+      </div>
+      <div>
+        <strong>Year:</strong> {{ vehicle.vehicle.year }}
+      </div>
+      <div>
+        <strong>Status:</strong> Under Service
+      </div>
+    </li>
+  </ul>
+</div>

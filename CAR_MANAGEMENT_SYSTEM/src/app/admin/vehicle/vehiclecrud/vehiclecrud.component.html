@@ -1,0 +1,37 @@
+<div class="container mt-4">
+  <h2 class="mb-4">Manage Vehicles</h2>
+  
+  <form (ngSubmit)="addVehicle()" #vehicleForm="ngForm" class="bg-light p-4 rounded">
+    <div class="form-group">
+      <label for="make">Make:</label>
+      <input type="text" id="make" [(ngModel)]="newVehicle.make" name="make" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="model">Model:</label>
+      <input type="text" id="model" [(ngModel)]="newVehicle.model" name="model" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="year">Year:</label>
+      <input type="number" id="year" [(ngModel)]="newVehicle.year" name="year" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="customerId">Customer ID:</label>
+      <input type="number" id="customerId" [(ngModel)]="newVehicle.customerId" name="customerId" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="vin">VIN:</label>
+      <input type="text" id="vin" [(ngModel)]="newVehicle.vin" name="vin" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!vehicleForm.form.valid">Add Vehicle</button>
+  </form>
+
+  <ul class="list-group mt-4">
+    <li *ngFor="let vehicle of vehicles" class="list-group-item d-flex justify-content-between align-items-center">
+      {{ vehicle.make }} {{ vehicle.model }} - {{ vehicle.year }}
+      <div>
+        <button (click)="editVehicle(vehicle)" class="btn btn-warning btn-sm me-2">Edit</button>
+        <button (click)="deleteVehicle(vehicle.vehicleId)" class="btn btn-danger btn-sm">Delete</button>
+      </div>
+    </li>
+  </ul>
+</div>

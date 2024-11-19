@@ -1,0 +1,34 @@
+<div>
+    <h2>Service Advisors Management</h2>
+    
+    <!-- Form for adding/updating a service advisor -->
+    <form (ngSubmit)="onSubmit()" #serviceAdvisorForm="ngForm">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required [(ngModel)]="currentServiceAdvisor.name" name="name" />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required [(ngModel)]="currentServiceAdvisor.email" name="email" />
+      </div>
+      <div>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" required [(ngModel)]="currentServiceAdvisor.phone" name="phone" />
+      </div>
+      <button type="submit" [disabled]="!serviceAdvisorForm.form.valid">
+        {{ isEditMode ? 'Update' : 'Add' }} Service Advisor
+      </button>
+      <button type="button" (click)="clearForm()">Clear</button>
+    </form>
+  
+    <!-- List of existing service advisors -->
+    <h3>Existing Service Advisors</h3>
+    <ul>
+      <li *ngFor="let advisor of serviceAdvisors">
+        {{ advisor.name }} - {{ advisor.email }} - {{ advisor.phone }}
+        <button (click)="editServiceAdvisor(advisor)">Edit</button>
+        <button (click)="deleteServiceAdvisor(advisor)">Delete</button>
+      </li>
+    </ul>
+  </div>
+  

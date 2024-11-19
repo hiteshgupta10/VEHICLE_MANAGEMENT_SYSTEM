@@ -1,0 +1,12 @@
+.container {
+  margin-top: 70px;
+}
+.red-text {
+  color: red;
+}.navbar-nav {
+  margin-left: auto;
+  padding-right: 50px;
+}
+.navbar {
+  padding-left: 20px; /* Adjust this value as needed */
+}

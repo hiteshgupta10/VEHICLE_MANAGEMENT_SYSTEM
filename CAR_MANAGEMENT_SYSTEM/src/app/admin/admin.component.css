@@ -1,0 +1,6 @@
+/* styles.css or component-specific CSS */
+.active-link {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+  }
+  
